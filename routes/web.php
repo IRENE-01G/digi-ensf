@@ -33,8 +33,10 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/confirmation', 'confirm')->name('confirmation');
 });
 
-// Route Admin
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
-Route::post('/admin/candidature/{id}/valider', [AdminController::class, 'valider'])->name('admin.valider');
-Route::post('/admin/candidature/{id}/rejeter', [AdminController::class, 'rejeter'])->name('admin.rejeter');
-Route::get('/admin/candidature/{id}/download', [AdminController::class, 'downloadDossier'])->name('admin.download');
+// Route Admin (Securisées)
+Route::middleware(['auth', 'is_admin'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::post('/admin/candidature/{id}/valider', [AdminController::class, 'valider'])->name('admin.valider');
+    Route::post('/admin/candidature/{id}/rejeter', [AdminController::class, 'rejeter'])->name('admin.rejeter');
+    Route::get('/admin/candidature/{id}/download', [AdminController::class, 'downloadDossier'])->name('admin.download');
+});

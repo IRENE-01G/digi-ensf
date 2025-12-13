@@ -8,6 +8,7 @@ use App\Models\Candidature;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
+
 class DossierController extends Controller
 {
     public function index()
@@ -19,6 +20,7 @@ class DossierController extends Controller
     {
         // 1. Validation
         $request->validate([
+
             'acte_naissance' => 'required|file|mimes:pdf,jpg,png,jpeg|max:5120',
             'nationalite' => 'required|file|mimes:pdf,jpg,png,jpeg|max:5120',
             'bac' => 'required|file|mimes:pdf,jpg,png,jpeg|max:5120',

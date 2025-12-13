@@ -160,3 +160,27 @@ h2{
 
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const fileInputs = document.querySelectorAll('.upload-box input[type="file"]');
+        
+        fileInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                const box = this.closest('.upload-box');
+                const p = box.querySelector('p');
+                
+                if (this.files && this.files[0]) {
+                    // Update visual style
+                    box.style.borderColor = '#cc2366';
+                    box.style.backgroundColor = 'rgba(204, 35, 102, 0.05)';
+                    
+                    // Update text with filename
+                    p.innerHTML = '<strong>' + this.files[0].name + '</strong><br>Fichier chargé';
+                    p.style.color = '#cc2366';
+                }
+            });
+        });
+    });
+    
+</script>

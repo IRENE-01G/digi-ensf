@@ -201,10 +201,11 @@
             <div class="d-flex align-items-center gap-3">
                 <a href="{{ route('accueil') }}" class="btn btn-outline-primary-custom rounded-pill px-4">Retour accueil</a>
                 <div class="d-flex align-items-center gap-2">
-                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;">
-                        <i class="bi bi-person-fill"></i>
+                    <!-- <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;">
+                        <i class="bi bi-person-fill"></i> -->
                     </div>
-                    <span class="fw-medium">Admin</span>
+                    
+                    <a href="{{ route('deconnexion') }}" class="btn btn-sm btn-outline-danger ms-2" title="Se déconnecter">se deconnecter<i class="bi bi-box-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -215,12 +216,12 @@
             <li class="nav-item">
                 <a class="nav-link active" href="#"><i class="bi bi-card-list me-2"></i>Candidatures</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#"><i class="bi bi-bar-chart me-2"></i>Statistiques</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="bi bi-people me-2"></i>Utilisateurs</a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </div>
@@ -235,8 +236,8 @@
                     <i class="bi bi-files"></i>
                 </div>
                 <div>
-                    <div class="text-muted small">Total</div>
-                    <div class="h4 mb-0 fw-bold">{{ $stats['total'] }}</div>
+                    <div class="text-muted small">Paiements</div>
+                    <div class="h4 mb-0 fw-bold">{{ $stats['paiements'] }}</div>
                 </div>
             </div>
         </div>
@@ -284,10 +285,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><br><br>
 
     <!-- Filter Bar -->
-    <div class="search-container">
+    <!-- <div class="search-container">
         <div class="input-group">
             <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
             <input type="text" class="form-control border-start-0 ps-0" placeholder="Rechercher par nom, email, formation...">
@@ -299,7 +300,7 @@
             <option value="accepte">Accepté</option>
             <option value="refuse">Refusé</option>
         </select>
-    </div>
+    </div> -->
 
     <!-- Main Table -->
     <div class="table-container">

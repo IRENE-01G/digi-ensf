@@ -30,6 +30,11 @@ class ConnexionController extends Controller
         if (Auth::attempt($credentials, $request->boolean('remember')))
         {
             $request->session()->regenerate();
+            
+            if (Auth::user()->role === 'admin') {
+                return redirect()->route('admin.index');
+            }
+
             return redirect()->intended(route('informations.index'));
         }
 

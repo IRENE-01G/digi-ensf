@@ -22,6 +22,7 @@ class AdminController extends Controller
             'en_cours' => $candidatures->where('statut', 'en_cours')->count(),
             'acceptes' => $candidatures->whereIn('statut', ['accepte', 'valide'])->count(),
             'refuses' => $candidatures->where('statut', 'refuse')->count(),
+            'paiements' => \App\Models\Paiement::count(), // Ajout statistique paiements
         ];
 
         return view('admin.index', compact('candidatures', 'stats'));
