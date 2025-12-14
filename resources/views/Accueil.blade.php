@@ -34,16 +34,16 @@
 </header><br><br>
 <body>
 
-<div style="background-image: url('{{ asset('assets/imp.png')}}'); background-size: cover; height: 80vh; display: flex; justify-content: center; align-items: center;">
+<div class="hero-section">
     
-    <div style="text-align: center; padding-top: 20%;">
-        <h1 style="color: white; font-size: 48px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);margin-top: -150px;">Candidature en ligne ENSF</h1><br><br>
-        <p style="color: white; font-size: 18px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Déposez vos dossier de candidature en ligne de manière simple et 
+    <div class="hero-content">
+        <h1 class="hero-title">Candidature en ligne ENSF</h1><br><br>
+        <p class="hero-text">Déposez vos dossier de candidature en ligne de manière simple et 
         <br>sécurisée.Suivez l'evolution de votre candidature en temps réel</p><br><br>
         @auth
-               <a href="{{ route('informations.index') }}" style="background-color: #d81bb3ff; color: white; font-size: 18px; border: none; border-radius: 10px; cursor: pointer;width:260px; display: inline-block; text-align: center; padding: 10px 0;">Commencer ma candidature</a>
+               <a href="{{ route('informations.index') }}" class="btn-hero">Commencer ma candidature</a>
         @else
-             <a href="{{ route('connexion.submit') }}" style="background-color: #d81bb3ff; color: white; font-size: 18px; border: none; border-radius: 10px; cursor: pointer;width:260px; display: inline-block; text-align: center; padding: 10px 0;">Commencer ma candidature</a>
+             <a href="{{ route('connexion.submit') }}" class="btn-hero">Commencer ma candidature</a>
         @endauth
     </div>
 </div><br><br>

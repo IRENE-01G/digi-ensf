@@ -16,10 +16,10 @@ class InformationController extends Controller
     
 
    
-    public function afficher()
-    {
-        return view('information');
-    }
+    // public function afficher()
+    // {
+    //     return view('information');
+    // }
 
     
     public function creer(Request $request)

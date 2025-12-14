@@ -11,15 +11,15 @@
                 }
 
             input{
-                    width: 500px;
+                    width: 100%;
                     height:40px;
                     border-radius:5px;
                     border: 2px solid #c1b7bc85;
-                   
+                    box-sizing: border-box;
                 }
             button{
                     background:#cc0066;
-                    width: 500px;
+                    width: 100%;
                     height:40px;
                     font-size:20px;
                     color:white;
@@ -33,7 +33,8 @@
                     margin-top: 5px;
                 }
             form{
-            width: 900px;
+            width: 95%;
+            max-width: 900px;
             margin: auto;
             height: auto;
             padding: 20px;
@@ -41,8 +42,7 @@
             background: color #a2a2a2;
             box-shadow:2px 2px 5px 1px #cc0066;
             border-radius:10px;
-            margin-left:-100px;
-            
+            box-sizing: border-box;
                 }
                 h1  {
                     color:#cc0066;

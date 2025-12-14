@@ -12,15 +12,15 @@
                 }
 
             input{
-                    width: 700px;
+                    width: 100%;
                     height:40px;
                     border-radius:5px;
                     border: 2px solid #c1b7bc85;
-                   
+                    box-sizing: border-box;
                 }
             button{
                     background:#cc0066;
-                    width: 700px;
+                    width: 100%;
                     height:35px;
                     font-size:20px;
                     color:white;
@@ -33,7 +33,8 @@
                     align-items:center;
                 }
             form{
-            width: 700px;
+            width: 90%;
+            max-width: 700px;
             margin: auto;
             height: auto;
             padding: 20px;

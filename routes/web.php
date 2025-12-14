@@ -9,6 +9,9 @@ use App\Http\Controllers\DossierController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PaiementController;  
+use Illuminate\Support\Facades\Mail;
+
+
 
 
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
@@ -39,4 +42,11 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::post('/admin/candidature/{id}/valider', [AdminController::class, 'valider'])->name('admin.valider');
     Route::post('/admin/candidature/{id}/rejeter', [AdminController::class, 'rejeter'])->name('admin.rejeter');
     Route::get('/admin/candidature/{id}/download', [AdminController::class, 'downloadDossier'])->name('admin.download');
+    Route::get('/admin/candidature/{id}/accept', [AdminController::class, 'accept'])->name('admin.accept');
+    Route::get('/admin/candidature/{id}/reject', [AdminController::class, 'reject'])->name('admin.reject');
 });
+
+
+
+
+

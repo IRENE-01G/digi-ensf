@@ -1,11 +1,19 @@
-<style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier de Candidature</title>
+    <style>
     .upload-card {
 background: #ffffffff;
 padding: 30px;
-width: 900px;
+width: 95%;
+max-width: 900px;
 margin: 40px auto;
 box-shadow:7px 7px 7px 4px #d996b7ff;
 border-radius: 10px;
+box-sizing: border-box;
 }
 
 .upload-card h2 {
@@ -65,7 +73,8 @@ color: #777;
 textarea{
     
     height: 250px;
-    width: 210%;
+    width: 100%;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-size: 15px;
     padding: 10px;
@@ -78,7 +87,36 @@ h2{
     border-radius:5px;  
 }
 
+@media (max-width: 768px) {
+    .upload-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .upload-card {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .button-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px !important;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    textarea {
+        width: 100%;
+    }
+    .upload-card h2 {
+        font-size: 24px;
+        height: auto;
+        padding: 10px;
+    }
+}
 </style>
+</head>
+<body>
 
 
 <div class="upload-card">
@@ -184,3 +222,5 @@ h2{
     });
     
 </script>
+</body>
+</html>

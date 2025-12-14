@@ -252,7 +252,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-6">
+        <!-- <div class="col-md-2 col-sm-6">
              <div class="stat-card">
                 <div class="icon-box" style="background-color: #3b82f6;">
                     <i class="bi bi-eye"></i>
@@ -260,9 +260,9 @@
                 <div>
                     <div class="text-muted small">En cours</div>
                     <div class="h4 mb-0 fw-bold">{{ $stats['en_cours'] }}</div>
-                </div>
+                </div> 
             </div>
-        </div>
+        </div> -->
         <div class="col-md-2 col-sm-6">
              <div class="stat-card">
                 <div class="icon-box" style="background-color: #10b981;">
@@ -380,7 +380,7 @@
                                 <i class="bi bi-eye"></i>
                             </button>
                             
-                            @if($candidature->statut === 'en_attente' || $candidature->statut === 'en_cours')
+                            @if($candidature->statut === 'en_attente' )
                             <form action="{{ route('admin.valider', $candidature->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-success" title="Valider"><i class="bi bi-check-lg"></i></button>

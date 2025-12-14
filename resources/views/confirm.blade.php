@@ -95,7 +95,8 @@ footer {
     background-color: #b01c78;
     color: white;
     padding: 30px 20px;
-    width: 1225px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contenu-footer {

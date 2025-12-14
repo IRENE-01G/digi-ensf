@@ -7,6 +7,8 @@ use App\Models\Candidature;
 use App\Models\User;
 use ZipArchive;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\AcceptMail;
 
 class AdminController extends Controller
 {
@@ -25,7 +27,7 @@ class AdminController extends Controller
             'paiements' => \App\Models\Paiement::count(), // Ajout statistique paiements
         ];
 
-        return view('admin.index', compact('candidatures', 'stats'));
+        return view ('admin.index', compact('candidatures', 'stats'));
     }
 
     public function valider($id)
@@ -37,7 +39,12 @@ class AdminController extends Controller
             $candidature->dossier->update(['statut' => 'valide']);
         }
 
-        return redirect()->back()->with('success', 'Candidature validée avec succès.');
+        // Envoyer email d'acceptation
+        if($candidature->user) {
+            Mail::to($candidature->user->email)->send(new AcceptMail($candidature->user));
+        }
+
+        return redirect()->back()->with('success', 'Candidature validée et email envoyé.');
     }
 
     public function rejeter($id)
