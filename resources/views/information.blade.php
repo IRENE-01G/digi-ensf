@@ -170,44 +170,44 @@ input:focus {
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="prenom">Prénom</label>
+                    <label for="prenom">Prénom*</label>
                     <input type="text" id="prenom" name="prenom" placeholder="Irène">
                 </div>
                 <div class="form-group">
-                    <label for="nom">Nom</label>
+                    <label for="nom">Nom*</label>
                     <input type="text" id="nom" name="nom" placeholder="GBEGRNAN">
                 </div>
             </div><br>
         
             <div class="form-row">
                 <div class="form-group">
-                    <label for="date_naissance">Date de naissance</label>
+                    <label for="date_naissance">Date de naissance*</label>
                     <input type="date" id="date_naissance" name="date_naissance" placeholder="01/04/2006">
                 </div>
                 <div class="form-group">
-                    <label for="lieu_naissance">Lieux de naissance</label>
+                    <label for="lieu_naissance">Lieux de naissance*</label>
                     <input type="text" id="lieu_naissance" name="lieu_naissance" placeholder="Lomé">
                 </div>
             </div><br>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="nationalite">Nationalité</label>
+                    <label for="nationalite">Nationalité*</label>
                     <input type="text" id="nationalite" name="nationalite" placeholder="togolaise">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">Email*</label>
                     <input type="email" id="email" name="email" placeholder="igbegnan@gmail.com">
                 </div>
             </div><br>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="telephone">Téléphone</label>
+                    <label for="telephone">Téléphone*</label>
                     <input type="tel" id="telephone" name="telephone" placeholder="+22871183058">
                 </div>
                 <div class="form-group">
-                    <label for="ville">Ville</label>
+                    <label for="ville">Ville*</label>
                     <input type="text" id="ville" name="adresse" placeholder="lomé">
                 </div>
             </div>
@@ -215,30 +215,30 @@ input:focus {
 
         <div class="section">
             <h2>Informations des parents / Tuteurs</h2>
-
+*
             <div class="form-row">
                 <div class="form-group">
-                    <label for="nom_parent">Nom</label>
+                    <label for="nom_parent">Nom*</label>
                     <input type="text" id="nom_parent" name="nom_parent" placeholder="GBEGNRAN">
                 </div>
                 <div class="form-group">
-                    <label for="prenom_parent">Prénom</label>
+                    <label for="prenom_parent">Prénom*</label>
                     <input type="text" id="prenom_parent" name="prenom_parent">
                 </div>
             </div>
 
             <div class="form-group full-width">
-                <label for="profession_parent">Profession</label>
+                <label for="profession_parent">Profession*</label>
                 <input type="text" id="profession_parent" name="profession_parent">
             </div>
 
             <div class="form-group full-width">
-                <label for="adresse_parent">Ville</label>
+                <label for="adresse_parent">Ville*</label>
                 <input type="text" id="adresse_parent" name="adresse_parent">
             </div>
 
             <div class="form-group full-width">
-                <label for="telephone_parent">Téléphone</label>
+                <label for="telephone_parent">Téléphone*</label>
                 <input type="tel" id="telephone_parent" name="telephone_parent">
             </div>
         </div>

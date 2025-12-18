@@ -128,7 +128,7 @@ h2{
 
     
     <div class="upload-block">
-        <label>copie certifiée de l'acte de naissance</label>
+        <label>copie certifiée de l'acte de naissance*</label>
         <div class="upload-box">
             <input type="file" name="acte_naissance" required>
             <span><img src="{{ asset('assets/p.png') }}"></span>
@@ -138,7 +138,7 @@ h2{
 
     
     <div class="upload-block">
-        <label>Duplicata de nationalité</label>
+        <label>Duplicata de nationalité*</label>
         <div class="upload-box">
             <input type="file" name="nationalite" required>
             <span><img src="{{ asset('assets/p.png') }}"></</span>
@@ -147,7 +147,7 @@ h2{
     </div>
 
      <div class="upload-block">
-        <label>Une copie certifié de BAC 2</label>
+        <label>Une copie certifié de BAC 2*</label>
         <div class="upload-box">
             <input type="file" name="bac" required>
             <span><img src="{{ asset('assets/p.png') }}"></span>
@@ -156,7 +156,7 @@ h2{
     </div>
 
      <div class="upload-block">
-        <label>Extrait de casier judiciaire (datant moins de 3 mois)</label>
+        <label>Extrait de casier judiciaire (datant moins de 3 mois)*</label>
         <div class="upload-box">
             <input type="file" name="casier" required>
             <span><img src="{{ asset('assets/p.png') }}"></</span>
@@ -165,7 +165,7 @@ h2{
     </div>
 
     <div class="upload-block">
-        <label>Certificat medical (datant moins de 3 mois)</label>
+        <label>Certificat medical (datant moins de 3 mois)*</label>
         <div class="upload-box">
             <input type="file" name="medical" required>
             <span><img src="{{ asset('assets/p.png') }}"></</span>
@@ -174,14 +174,14 @@ h2{
     </div>
 
     <div class="upload-block">
-        <label>une copie de note de service delivree par le ministre de la santé</label>
+        <label>une copie de note de service delivree par le ministre de la santé*</label>
         <div class="upload-box">
             <input type="file" name="note_service" required>
             <span><img src="{{ asset('assets/p.png') }}"></</span>
             <p>Cliquez pour télécharger PDF, JPG, PNG<br>(max 5MB)</p>
         </div>
     </div>
-    <label for="text">Lettre de motivation</label><br>
+    <label for="text">Lettre de motivation*</label><br>
     <textarea id="text" name="lettre_motivation" style=" border-radius:5px; border: 2px solid #c1b7bc85;  " placeholder="Votre lettre de motivation ici..."></textarea><br><br>
 
     <div class="button-section" style="display:flex; gap:70px; margin-top:20px;">

@@ -48,6 +48,20 @@
                     color:#cc0066;
 
                 }
+                .signup-link {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-family: Arial, sans-serif;
+                }
+                .signup-link a {
+                    color: #0011ccff;
+                  
+                    font-weight: bold;
+                }
+                .signup-link a:hover {
+                    text-decoration: underline;
+                    color: #cb1c70ff;
+                }
           
             
         </style>
@@ -60,8 +74,9 @@
 <input type="email" id="email" name="email" required placeholder="votre@email.com"><br><br>
 <label for="password">Mot de passe :</label><br><br>
 <input type="password" id="password" name="password" required placeholder="•••••••"><br><br>
-<label><input type="checkbox" name="remember"> Se souvenir de moi</label><br><br>
-
+<div class="signup-link">
+    <p>Vous n'avez pas de compte ? <a href="{{ route('inscription.form') }}">Inscrivez-vous</a></p>
+</div>
 <button type="submit">Se connecter</button>
             </form>  
         
