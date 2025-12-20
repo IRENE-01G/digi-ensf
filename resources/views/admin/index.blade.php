@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+     <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo-ensf.jpg') }}">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -33,7 +33,7 @@
             gap: 10px;
         }
         .navbar-brand span {
-            color: #4a3aff; /* ENSF Purple */
+            color: #4a3aff; 
         }
         .btn-outline-primary-custom {
             color: #4a3aff;
@@ -46,13 +46,13 @@
             border-color: #ccc;
         }
         
-        /* Tabs */
+        
         .nav-tabs {
             border-bottom: 0;
             margin-top: 1rem;
             padding: 0 2rem;
-            background: #f8f9fa; /* Match body bg to look transparent or white? Mockup has white header area usually. Let's keep it simple. */
-            background: white; /* Actually navbar + tabs seem to be one white block in typical dashboards, but here it's separated? Mockup shows tabs below header. Let's wrap header and tabs in a white container. */
+            background: #f8f9fa;
+            background: white;
         }
         .header-container {
             background: white;
@@ -76,7 +76,7 @@
             isolation: isolate;
         }
 
-        /* Stats Cards */
+        
         .stat-card {
             background: white;
             border-radius: 12px;
@@ -98,7 +98,7 @@
             font-size: 1.25rem;
         }
         
-        /* Search Bar */
+        
         .search-container {
             background: white;
             padding: 1rem;
@@ -114,7 +114,7 @@
             border-radius: 8px;
         }
         
-        /* Table */
+       
         .table-container {
             background: white;
             border-radius: 12px;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>page de connexion</title>
+     <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo-ensf.jpg') }}">
  </head>
         <style>
             * {
@@ -55,7 +56,6 @@
                 }
                 .signup-link a {
                     color: #0011ccff;
-                  
                     font-weight: bold;
                 }
                 .signup-link a:hover {

@@ -6,6 +6,7 @@
     <title>Page de Paiement Sécurisé</title>
     <link rel="stylesheet" href="payment-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo-ensf.jpg') }}">
 </head>
 <style>
     /* Styles de base pour tout le corps de la page */

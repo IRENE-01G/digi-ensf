@@ -118,7 +118,8 @@
 </div>
 </footer><br><br><br>
 <hr><hr><br>
-<h6>2025 ENSF .tout droit réservés |digi-ensf |ce site est réalisé par GBEGNRAN Irène</h6><br><br>
+<!-- <h6>2025 ENSF .tout droit réservés |digi-ensf |ce site est réalisé par GBEGNRAN Irène</h6><br><br> -->
+<h4 style="text-align: center;margin-bottom: 0;">    Copyright © 2025 Ecole Nationale de Sages-Femmes de Lomé | Powered by Irène GBEGNRAN    </h4><br><br>
 
 </body>
 </html>
