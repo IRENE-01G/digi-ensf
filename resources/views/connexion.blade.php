@@ -65,6 +65,15 @@
           
             
         </style>
+        <style>
+            @media (max-width: 600px) {
+                form {
+                    width: 95%;
+                    margin: 20px auto;
+                    margin-top: 50px;
+                }
+            }
+        </style>
  <body>
                 <form method="POST" action="{{ route('connexion.submit') }}">
                     @csrf

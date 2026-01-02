@@ -162,15 +162,13 @@ button {
 
 footer {
     display: flex;
-    gap: 410px;
-
-
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 50px;
 }
 
-.tr {
-    margin-left: 500px;
-    margin-top: -160px;
-}
+
+
 
 h6 {
     text-align: center;
@@ -218,7 +216,7 @@ h6 {
     height: auto;
 }
 
-/* Hero Section */
+
 .hero-section {
     background-image: url('../assets/imp.png');
     background-size: cover;
@@ -259,7 +257,7 @@ h6 {
     padding: 10px 0;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -294,12 +292,13 @@ h6 {
 
     footer {
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
         text-align: center;
-        padding: 20px;
+        padding: 40px 20px;
+        align-items: center;
     }
 
-    /* Hero Responsive */
+
     .hero-content {
         padding-top: 0;
         margin-top: 0;
@@ -316,7 +315,8 @@ h6 {
     }
 
     .tr {
-        margin: 20px 0 0 0;
+    
+        margin: 0;
         text-align: center;
     }
 
@@ -335,6 +335,7 @@ h6 {
         flex-wrap: wrap;
         margin-top: 10px;
         position: static;
+        gap: 10px;
     }
 
     .logo {

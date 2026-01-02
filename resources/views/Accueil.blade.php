@@ -100,22 +100,23 @@
 
 <footer>
     <div class="a">
-<img src="{{ asset('assets/logo-ensf.jpg') }}" style="width:80px;height:80px;"><br><br>
-<h5>ENSF =Ecole Nationale des Sages femmes</h5>
-</div>
-<div class="footer">
-<h2>Candidature</h2><br>
-<p>Proccessus</p><br>
-<p>Document requis</p><br>
-<p>Calendrier</p><br>
-    <div>
-<div class="tr">
+        <img src="{{ asset('assets/logo-ensf.jpg') }}" style="width:80px;height:80px;margin-left: 30px;"><br><br>
+        <h5 style="margin-left: 30px;">ENSF =Ecole Nationale des Sages femmes</h5>
+    </div>
 
-<h2>Contact</h2><br>
-<p>Email: ensf@gmail.com</p><br>
-<p>Tel: +228 71 18 30 58</p><br>
-<p>TOGO-LOME</p>
-</div>
+    <div class="footer">
+        <h2>Candidature</h2><br>
+        <p>Proccessus</p><br>
+        <p>Document requis</p><br>
+        <p>Calendrier</p><br>
+    </div>
+
+    <div class="tr">
+        <h2>Contact</h2><br>
+        <p>Email: ensf@gmail.com</p><br>
+        <p>Tel: +228 71 18 30 58</p><br>
+        <p>TOGO-LOME</p>
+    </div>
 </footer><br><br><br>
 <hr><hr><br>
 <!-- <h6>2025 ENSF .tout droit réservés |digi-ensf |ce site est réalisé par GBEGNRAN Irène</h6><br><br> -->
