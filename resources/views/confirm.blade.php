@@ -121,10 +121,30 @@ footer {
     margin-bottom: 5px;
     line-height: 1.4;
 }
+    .btn-retour-accueil {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #b01c78;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-retour-accueil:hover {
+        background-color: #8a155e;
+    }
 </style>
 <body>
 
     <div class="container">
+
+        <div class="action-buttons" style="margin-left: 20px;">
+            <a href="{{ route('accueil') }}" class="btn-retour-accueil">Retour à l'accueil</a>
+        </div>
         
         <div class="header-succes">
             <svg class="icone-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -164,6 +184,9 @@ footer {
                 </div>
             </div>
         </div>
+
+
+    </div> <footer>
 
     </div> <footer>
         <div class="contenu-footer">
