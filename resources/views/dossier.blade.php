@@ -74,7 +74,7 @@ color: #777;
 textarea{
     
     height: 250px;
-    width: 100%;
+    width: 210%;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-size: 15px;
@@ -115,12 +115,99 @@ h2{
         padding: 10px;
     }
 }
+    .progress-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+    }
+    .progress-step {
+        width: 35px;
+        height: 35px;
+        background-color: #e0e0e0;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+    .progress-step.active {
+        background-color: #cc2366; /* Matching the h2 background */
+        box-shadow: 0 0 0 4px rgba(204, 35, 102, 0.2);
+    }
+    .progress-step.completed {
+        background-color: #cc2366;
+    }
+    .progress-line {
+        flex: 1;
+        height: 3px;
+        background-color: #e0e0e0;
+        margin: 0 10px;
+        position: relative;
+    }
+    .progress-line.filled {
+        background-color: #cc2366;
+    }
+    .progress-label {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 13px;
+        color: #666;
+        white-space: nowrap;
+        font-weight: normal;
+    }
+    .progress-step.active .progress-label {
+        color: #cc2366;
+        font-weight: bold;
+    }
+    @media (max-width: 768px) {
+        .progress-label {
+            display: none; /* Hide labels on mobile if crowded */
+        }
+    }
 </style>
 </head>
 <body>
 
 
 <div class="upload-card">
+    <div class="progress-container">
+        <div class="progress-step completed">
+            1
+            <span class="progress-label">Informations</span>
+        </div>
+        <div class="progress-line filled"></div>
+        <div class="progress-step active">
+            2
+            <span class="progress-label">Dossier</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step">
+            3
+            <span class="progress-label">Paiement</span>
+        </div>
+    </div>
+
+    @if ($errors->any())
+        <div style="background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #f5c6cb;">
+            <ul style="margin: 0; padding-left: 20px;">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <h2>Documents requis</h2><br><br>
 <form method="POST" action="{{ route('dossier.store') }}" enctype="multipart/form-data">
@@ -188,11 +275,11 @@ h2{
     <div class="button-section" style="display:flex; gap:70px; margin-top:20px;">
         <a href="{{ route('accueil') }}" class="btn" style="background:#777; text-decoration:none; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">Annuler</a>
 
-        <!-- <a href="{{ route('paiement.index') }}" class="btn" style="background:#cc0066; text-decoration:none; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">Soumettre et payer</a> -->
-         <button type="submit" class="btn btn-primary">Soumettre et payer</button>
+        <!-- <a href="{{ route('paiement.index') }}" class="btn" style="background:#cc0066; text-decoration:none; color:white; padding:10px 23px; border:none; border-radius:5px; cursor:pointer;">Soumettre et payer</a> -->
+         <button type="submit" class="btn btn-primary" >Soumettre et payer</button>
 
 
-
+    
 
 
 </div>

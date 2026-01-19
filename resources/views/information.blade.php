@@ -159,12 +159,83 @@ input:focus {
        
     }
 }
+/* Progress Bar Styles */
+    .progress-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+        max-width: 100%;
+    }
+    .progress-step {
+        width: 35px;
+        height: 35px;
+        background-color: #e0e0e0;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+    .progress-step.active {
+        background-color: #b30047;
+        box-shadow: 0 0 0 4px rgba(179, 0, 71, 0.2);
+    }
+    .progress-step.completed {
+        background-color: #b30047;
+    }
+    .progress-line {
+        flex: 1;
+        height: 3px;
+        background-color: #e0e0e0;
+        margin: 0 10px;
+        position: relative;
+    }
+    .progress-line.filled {
+        background-color: #b30047;
+    }
+    .progress-label {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 13px;
+        color: #666;
+        white-space: nowrap;
+        font-weight: normal;
+    }
+    .progress-step.active .progress-label {
+        color: #b30047;
+        font-weight: bold;
+    }
 </style>
 <body>
     <form method ="POST" action ="{{ route('informations.store') }}">
         @csrf
 
     <div class="form-container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-step active">
+                1
+                <span class="progress-label">Informations</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                2
+                <span class="progress-label">Dossier</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                3
+                <span class="progress-label">Paiement</span>
+            </div>
+        </div>
 
         <div class="section">
             <h2>Informations personnelles</h2>

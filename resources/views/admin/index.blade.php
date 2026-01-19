@@ -380,7 +380,7 @@
                                 <i class="bi bi-eye"></i>
                             </button>
                             
-                            @if($candidature->statut === 'en_attente' )
+                            @if($candidature->statut === 'en_cours' )
                             <form action="{{ route('admin.valider', $candidature->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-success" title="Valider"><i class="bi bi-check-lg"></i></button>

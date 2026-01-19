@@ -221,10 +221,84 @@ body {
         justify-content: flex-end; /* Aligner à droite */
     }
 }
+    .progress-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .progress-step {
+        width: 35px;
+        height: 35px;
+        background-color: #e0e0e0;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+    .progress-step.active {
+        background-color: #b80e41; /* Matching the button color */
+        box-shadow: 0 0 0 4px rgba(184, 14, 65, 0.2);
+    }
+    .progress-step.completed {
+        background-color: #b80e41;
+    }
+    .progress-line {
+        flex: 1;
+        height: 3px;
+        background-color: #e0e0e0;
+        margin: 0 10px;
+        position: relative;
+    }
+    .progress-line.filled {
+        background-color: #b80e41;
+    }
+    .progress-label {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 13px;
+        color: #666;
+        white-space: nowrap;
+        font-weight: normal;
+    }
+    .progress-step.active .progress-label {
+        color: #b80e41;
+        font-weight: bold;
+    }
+    @media (max-width: 600px) {
+        .progress-label {
+            display: none;
+        }
+    }
 </style>
 <body>
 
     <div class="payment-container">
+        <div class="progress-container">
+            <div class="progress-step completed">
+                1
+                <span class="progress-label">Informations</span>
+            </div>
+            <div class="progress-line filled"></div>
+            <div class="progress-step completed">
+                2
+                <span class="progress-label">Dossier</span>
+            </div>
+            <div class="progress-line filled"></div>
+            <div class="progress-step active">
+                3
+                <span class="progress-label">Paiement</span>
+            </div>
+        </div>
+
         <h2 class="payment-title">Confirmer votre paiement</h2>
 
         <div class="summary-section">
