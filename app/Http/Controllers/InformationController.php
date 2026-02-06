@@ -27,7 +27,7 @@ class InformationController extends Controller
         $validatedData = $request->validate([
             'prenom' => 'required|string|max:255',
             'nom' => 'required|string|max:255',
-            'email' => 'required|email|max:255|unique:informations,email',
+            'email' => 'required|email|max:255',
             'date_naissance' => 'required|date',
             'lieu_naissance' => 'required|string|max:255',
             'nationalite' => 'required|string|max:255',

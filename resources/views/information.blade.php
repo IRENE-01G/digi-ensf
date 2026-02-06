@@ -213,12 +213,34 @@ input:focus {
         color: #b30047;
         font-weight: bold;
     }
+    .btn-retour-accueil {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #b30047;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+    }
+
+    .btn-retour-accueil:hover {
+        background-color: #8a155e;
+    }
 </style>
 <body>
     <form method ="POST" action ="{{ route('informations.store') }}">
         @csrf
 
     <div class="form-container">
+        
+        <div style="margin-bottom: 15px;">
+             <a href="{{ route('accueil') }}" class="btn-retour-accueil">Retour</a>
+        </div>
+
         <!-- Progress Bar -->
         <div class="progress-container">
             <div class="progress-step active">
@@ -287,7 +309,7 @@ input:focus {
 
         <div class="section">
             <h2>Informations des parents / Tuteurs</h2>
-*
+
             <div class="form-row">
                 <div class="form-group">
                     <label for="nom_parent">Nom*</label>
@@ -295,23 +317,23 @@ input:focus {
                 </div>
                 <div class="form-group">
                     <label for="prenom_parent">Prénom*</label>
-                    <input type="text" id="prenom_parent" name="prenom_parent">
+                    <input type="text" id="prenom_parent" name="prenom_parent" placeholder="Jean">
                 </div>
             </div>
 
             <div class="form-group full-width">
                 <label for="profession_parent">Profession*</label>
-                <input type="text" id="profession_parent" name="profession_parent">
+                <input type="text" id="profession_parent" name="profession_parent" placeholder="Infirmier">
             </div>
 
             <div class="form-group full-width">
                 <label for="adresse_parent">Ville*</label>
-                <input type="text" id="adresse_parent" name="adresse_parent">
+                <input type="text" id="adresse_parent" name="adresse_parent" placeholder="Lome">
             </div>
 
             <div class="form-group full-width">
                 <label for="telephone_parent">Téléphone*</label>
-                <input type="tel" id="telephone_parent" name="telephone_parent">
+                <input type="tel" id="telephone_parent" name="telephone_parent" placeholder="90096938">
             </div>
         </div>
 

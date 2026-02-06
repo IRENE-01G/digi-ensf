@@ -27,7 +27,7 @@ class DossierController extends Controller
             'casier' => 'required|file|mimes:pdf,jpg,png,jpeg|max:5120',
             'medical' => 'required|file|mimes:pdf,jpg,png,jpeg|max:5120',
             'note_service' => 'required|file|mimes:pdf,jpg,png,jpeg|max:5120',
-            'lettre_motivation' => 'nullable|string',
+            'lettre_motivation' => 'required|file|mimes:pdf,jpg,png,jpeg|max:5120',
         ]);
         
 
@@ -47,7 +47,7 @@ class DossierController extends Controller
         
         // 3. Upload des fichiers
         $paths = [];
-        $files = ['acte_naissance', 'nationalite', 'bac', 'casier', 'medical', 'note_service'];
+        $files = ['acte_naissance', 'nationalite', 'bac', 'casier', 'medical', 'note_service', 'lettre_motivation'];
 
         foreach ($files as $field) {
             if ($request->hasFile($field)) {
@@ -66,7 +66,7 @@ class DossierController extends Controller
                 'casier' => $paths['casier'] ?? null,
                 'medical' => $paths['medical'] ?? null,
                 'note_service' => $paths['note_service'] ?? null,
-                'lettre_motivation' => $request->lettre_motivation,
+                'lettre_motivation' => $paths['lettre_motivation'] ?? null,
                 'statut' => 'en_attente',
             ],
           

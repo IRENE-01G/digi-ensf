@@ -234,21 +234,21 @@ h6 {
 
 .hero-title {
     color: white;
-    font-size: 48px;
+    font-size: 60px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-top: -150px;
+    margin-top: -250px;
 }
 
 .hero-text {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .btn-hero {
     background-color: #d81bb3ff;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;

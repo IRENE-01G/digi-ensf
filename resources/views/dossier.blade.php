@@ -176,12 +176,33 @@ h2{
             display: none; /* Hide labels on mobile if crowded */
         }
     }
+    .btn-retour-accueil {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #cc2366;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+    }
+    .btn-retour-accueil:hover {
+        background-color: #a01b50;
+    }
 </style>
 </head>
 <body>
 
 
 <div class="upload-card">
+    
+    <div style="margin-bottom: 20px;">
+        <a href="{{ route('informations.index') }}" class="btn-retour-accueil">Retour</a>
+    </div>
+
     <div class="progress-container">
         <div class="progress-step completed">
             1
@@ -269,19 +290,21 @@ h2{
             <p>Cliquez pour télécharger PDF, JPG, PNG<br>(max 5MB)</p>
         </div>
     </div>
-    <label for="text">Lettre de motivation*</label><br>
-    <textarea id="text" name="lettre_motivation" style=" border-radius:5px; border: 2px solid #c1b7bc85;  " placeholder="Votre lettre de motivation ici..."></textarea><br><br>
+    <div class="upload-block">
+        <label>Lettre de motivation*</label>
+        <div class="upload-box">
+            <input type="file" name="lettre_motivation" required>
+            <span><img src="{{ asset('assets/p.png') }}"></span>
+            <p>Cliquez pour télécharger PDF, JPG, PNG<br>(max 5MB)</p>
+        </div>
+    </div>
 
-    <div class="button-section" style="display:flex; gap:70px; margin-top:20px;">
-        <a href="{{ route('accueil') }}" class="btn" style="background:#777; text-decoration:none; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">Annuler</a>
+</div>
 
-        <!-- <a href="{{ route('paiement.index') }}" class="btn" style="background:#cc0066; text-decoration:none; color:white; padding:10px 23px; border:none; border-radius:5px; cursor:pointer;">Soumettre et payer</a> -->
-         <button type="submit" class="btn btn-primary" >Soumettre et payer</button>
+<div class="button-section" style="display:flex; justify-content: center; gap:70px; margin-top:40px; margin-bottom: 20px;">
+    <a href="{{ route('accueil') }}" class="btn" style="background:#777; text-decoration:none; color:white; padding:12px 30px; border:none; border-radius:5px; cursor:pointer; display: flex; align-items: center; justify-content: center;">Annuler</a>
 
-
-    
-
-
+    <button type="submit" class="btn btn-primary" style="background:#cc0066; color:white; padding:12px 30px; border:none; border-radius:5px; cursor:pointer; font-size: 16px; font-weight: bold;">Soumettre et payer</button>
 </div>
 
 
