@@ -241,7 +241,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-6">
+        <!-- <div class="col-md-2 col-sm-6">
              <div class="stat-card">
                 <div class="icon-box" style="background-color: #f59e0b;">
                     <i class="bi bi-clock-history"></i>
@@ -251,8 +251,8 @@
                     <div class="h4 mb-0 fw-bold">{{ $stats['en_attente'] }}</div>
                 </div>
             </div>
-        </div>
-        <!-- <div class="col-md-2 col-sm-6">
+        </div> -->
+        <div class="col-md-2 col-sm-6">
              <div class="stat-card">
                 <div class="icon-box" style="background-color: #3b82f6;">
                     <i class="bi bi-eye"></i>
@@ -262,7 +262,7 @@
                     <div class="h4 mb-0 fw-bold">{{ $stats['en_cours'] }}</div>
                 </div> 
             </div>
-        </div> -->
+        </div>
         <div class="col-md-2 col-sm-6">
              <div class="stat-card">
                 <div class="icon-box" style="background-color: #10b981;">
